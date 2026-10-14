@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="282.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="question2.Controls">
+   <children>
+      <Pane layoutY="-1.0" prefHeight="239.0" prefWidth="342.0">
+         <children>
+            <TextField fx:id="screen" layoutX="21.0" layoutY="109.0" prefHeight="25.0" prefWidth="212.0" promptText="0" />
+            <TextArea layoutX="66.0" layoutY="42.0" prefHeight="29.0" prefWidth="141.0" text="Calculator">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </TextArea>
+            <VBox layoutX="31.0" layoutY="151.0" prefHeight="107.0" prefWidth="93.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="num_7" mnemonicParsing="false" onAction="#addNewTextToScreen" text="7" />
+                        <Button fx:id="num_8" mnemonicParsing="false" onAction="#addNewTextToScreen" text="8" />
+                        <Button fx:id="num_9" mnemonicParsing="false" onAction="#addNewTextToScreen" text="9" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="num_4" mnemonicParsing="false" onAction="#addNewTextToScreen" text="4" />
+                        <Button fx:id="num_5" mnemonicParsing="false" onAction="#addNewTextToScreen" text="5" />
+                        <Button fx:id="num_6" mnemonicParsing="false" onAction="#addNewTextToScreen" text="6" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="num_1" mnemonicParsing="false" onAction="#addNewTextToScreen" text="1" />
+                        <Button fx:id="num_2" mnemonicParsing="false" onAction="#addNewTextToScreen" text="2" />
+                        <Button fx:id="num_3" mnemonicParsing="false" onAction="#addNewTextToScreen" text="3" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="num_0" alignment="CENTER_RIGHT" contentDisplay="TOP" mnemonicParsing="false" onAction="#addNewTextToScreen" text="0" textAlignment="CENTER">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="23.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+            <VBox layoutX="138.0" layoutY="142.0" prefHeight="114.0" prefWidth="113.0">
+               <children>
+                  <HBox prefHeight="38.0" prefWidth="125.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btn_plus" mnemonicParsing="false" onAction="#activateOperation" text="+" />
+                        <Button fx:id="btn_minus" mnemonicParsing="false" onAction="#activateOperation" text="-" />
+                        <Button fx:id="btn_multiply" mnemonicParsing="false" onAction="#activateOperation" text="*" />
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="46.0" prefWidth="158.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btn_divide" mnemonicParsing="false" onAction="#activateOperation" text="/" />
+                        <Button fx:id="btn_modulo" mnemonicParsing="false" onAction="#activateOperation" text="\%" />
+                        <Button fx:id="btn_power" mnemonicParsing="false" onAction="#activateOperation" text="^" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="btn_equal" alignment="TOP_LEFT" contentDisplay="TOP" mnemonicParsing="false" onAction="#activateEqual" prefHeight="28.0" prefWidth="63.0" text="        =" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets right="30.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </VBox>
+            <Button fx:id="btn_clear" layoutX="271.0" layoutY="192.0" mnemonicParsing="false" onAction="#clearScreen" text="Clear" />
+            <Button fx:id="btn_del" layoutX="271.0" layoutY="151.0" mnemonicParsing="false" onAction="#deleteOne" text="del" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
